@@ -89,7 +89,6 @@
 \footnotesize
 \begin{multicols}{3}
 
-
 % multicol parameters
 % These lengths are set only within the two main columns
 %\setlength{\columnseprule}{0.25pt}
@@ -123,8 +122,12 @@
 
 \subsection{Search and Replace}
 \begin{tabular}{@{}ll@{}}
+\verb!:/blah!		         & Search for \verb!blah!\\
+\verb!n!   		             & Next match\\
+\verb!N!		             & Previous match\\
 \verb!:%s/old/new/!          & Replace \verb!old! with \verb!new! globally\\
 \verb!:%s/old/new/c!         & Ask for every match\\
+\verb!:%s/^\s*--//!          & Remove SQL comments (\verb!--!)\\
 \end{tabular}
 
 \subsection{Undo and Redo}
