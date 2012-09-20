@@ -101,6 +101,8 @@
      \Large{\textbf{Vim Cheat Sheet}} \\
 \end{center}
 
+These are the Vim commands I actually use. Enjoy!
+
 \subsection{Start editing...}
 \begin{tabular}{@{}ll@{}}
 \verb!i!       & At the cursor \\
@@ -110,6 +112,16 @@
 \verb!o!       & New line after this one\\
 \verb!O!       & New line before this one\\
 \end{tabular}
+
+\subsection{Cursor}
+\begin{tabular}{@{}ll@{}}
+\verb!^!          & Goto first non-whitespace char in line\\
+\verb!$!          & Last character in line\\
+\verb!e (E)!      & End of (whitespace-delimited) word, next word\\
+\verb!b (B)!      & Beginning of (whitespace-delimited) word, last word\\
+\verb!:n!         & Goto line number \verb!n!\\ 
+\end{tabular}
+
 
 
 \subsection{Copy, Paste, Delete}
@@ -135,6 +147,12 @@
 \verb!u!          & Undo\\
 \end{tabular}
 
+\subsection{Save and Exit}
+\begin{tabular}{@{}ll@{}}
+\verb!:wq!          & Save and exit\\
+\verb!:q!!          & Exit aborting changes\\
+\end{tabular}
+
 \subsection{Syntax Highlighting}
 \begin{tabular}{@{}ll@{}}
 \verb!:syntax {on|off}!      & Toggle syntax highlighting \\
@@ -143,16 +161,24 @@
 
 
 
+\begin{center}
 \rule{0.3\linewidth}{0.25pt}
-\scriptsize
+\end{center}
 
-\includegraphics[width=10em]{by_nc_sa.eps}
 
-This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/3.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License}.
 
-\copyright\ 2012 \href{http://matan.name}{Adam Matan}
 
-Based on a \href{http://www.stdout.org/~winston/latex/}{\LaTeX\ template by Winston Chang}
+
+\begin{scriptsize}
+\includegraphics[width=6em]{by_nc_sa.eps} {\copyright\ 2012 \href{http://matan.name}{Adam Matan}. 
+
+This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/3.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License}.}
+
+Template and general idea based on a \href{http://www.stdout.org/~winston/latex/}{\LaTeX\ template by Winston Chang}.
+\end{scriptsize}
+
+
+
 
 \end{multicols}
 \end{document}
