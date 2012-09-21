@@ -35,7 +35,7 @@
 \renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
                                 {-1ex plus -.5ex minus -.2ex}%
                                 {1ex plus .2ex}%
-                                {\normalfont\small\bfseries}}
+                                {\normalfont\small\bfseries\center\color{ForestGreen}}}
 \makeatother
 
 
@@ -123,16 +123,26 @@
 \end{tabular}
 
 \section{Nice to have}
-\subsection{Syntax Highlighting}
+
+\subsection{Code}
+
+\subsubsection{Syntax Highlighting}
 \begin{tabular}{@{}ll@{}}
 \verb!:syntax {on|off}!      & Toggle syntax highlighting \\
 \verb!:set bg={dark|light}!  & Adjust highlighting brightness \\
 \end{tabular}
 
-\subsection{Line numbers}
+\subsubsection{Line numbers}
 \begin{tabular}{@{}ll@{}}
 \verb!:set (no)nu!				& Set (no) line numbers \\
 \verb!:set bg={dark|light}!  	& Adjust highlighting brightness \\
+\end{tabular}
+
+\subsubsection{Indentation}
+\begin{tabular}{@{}ll@{}}
+\verb!==!				& Indent this line \\
+\verb!50==! 		 	& Indent 50 next lines in accordance with this line \\
+\verb!gg=G! 		 	& Indent entire document (\verb!gg! for start, \verb!G! for end) \\
 \end{tabular}
 
 \begin{center}
@@ -144,13 +154,16 @@
 
 
 
-\includegraphics[width=6em]{by_nc_sa.eps} {\copyright\ 2012 \href{http://matan.name}{Adam Matan}.}
+\includegraphics[width=6em]{by_nc_sa.eps} This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/3.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License}.
 
-Sources: \href{http://rayninfo.co.uk/vimtips.html}{Best of Vim Tips},
-Credits: \href{http://commons.wikimedia.org/wiki/File:Gnome-face-smile.svg}{Happy icon},
+{\copyright\ 2012 \href{http://matan.name}{Adam Matan}.}
 
 \begin{tiny}
-This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/3.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License}.
+Sources: \href{http://rayninfo.co.uk/vimtips.html}{Best of Vim Tips},
+
+StackOverflow.com questions \href{http://stackoverflow.com/questions/506075/how-do-i-fix-the-indentation-of-an-entire-file-in-vi}{506075}
+
+Graphics credits: \href{http://commons.wikimedia.org/wiki/File:Gnome-face-smile.svg}{Happy icon}
 
 Template and general idea based on a \href{http://www.stdout.org/~winston/latex/}{\LaTeX\ template by Winston Chang}.
 \end{tiny}
