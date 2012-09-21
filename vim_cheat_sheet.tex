@@ -11,40 +11,7 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true}
 
-
-
-% To make this come out properly in landscape mode, do one of the following
-% 1.
-%  pdflatex latexsheet.tex
-%
-% 2.
-%  latex latexsheet.tex
-%  dvips -P pdf  -t landscape latexsheet.dvi
-%  ps2pdf latexsheet.ps
-
-
-% If you're reading this, be prepared for confusion.  Making this was
-% a learning experience for me, and it shows.  Much of the placement
-% was hacked in; if you make it better, let me know...
-
-
-% 2008-04
-% Changed page margin code to use the geometry package. Also added code for
-% conditional page margins, depending on paper size. Thanks to Uwe Ziegenhagen
-% for the suggestions.
-
-% 2006-08
-% Made changes based on suggestions from Gene Cooperman. <gene at ccs.neu.edu>
-
-
-% To Do:
-% \listoffigures \listoftables
-% \setcounter{secnumdepth}{0}
-
-
-% This sets page margins to .5 inch if using letter paper, and to 1cm
-% if using A4 paper. (This probably isn't strictly necessary.)
-% If using another size paper, use default 1cm margins.
+% Narrow margins
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
 	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
 	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
@@ -60,11 +27,11 @@
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
                                 {-1ex plus -.5ex minus -.2ex}%
                                 {0.5ex plus .2ex}%x
-                                {\normalfont\large\bfseries}}
+                                {\normalfont\large\bfseries\center\color{RoyalBlue}}}
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
                                 {-1explus -.5ex minus -.2ex}%
                                 {0.5ex plus .2ex}%
-                                {\normalfont\normalsize\bfseries}}
+                                {\normalfont\normalsize\bfseries\center\color{Cerulean}}}
 \renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
                                 {-1ex plus -.5ex minus -.2ex}%
                                 {1ex plus .2ex}%
@@ -98,11 +65,11 @@
 \setlength{\columnsep}{2pt}
 
 \begin{center}
-     \Large{\textbf{Vim Cheat Sheet}} \\
+     \includegraphics[width=7em]{vim_logo.eps}
+     \Large{\textbf{\color{WildStrawberry}{Cheat Sheet}}} \\
 \end{center}
 
-These are the Vim commands I actually use. Enjoy!
-
+\section{Bare minimum}
 \subsection{Start editing...}
 \begin{tabular}{@{}ll@{}}
 \verb!i!       & At the cursor \\
@@ -134,7 +101,8 @@ These are the Vim commands I actually use. Enjoy!
 
 \subsection{Search and Replace}
 \begin{tabular}{@{}ll@{}}
-\verb!:/blah!		         & Search for \verb!blah!\\
+\verb!/Romeo!		         & Search for \verb!Romeo!\\
+\verb!:g/Romeo/#!			 & \includegraphics[width=1em]{happy.png}Show matches with line numbers\\
 \verb!n!   		             & Next match\\
 \verb!N!		             & Previous match\\
 \verb!:%s/old/new/!          & Replace \verb!old! with \verb!new! globally\\
@@ -147,19 +115,27 @@ These are the Vim commands I actually use. Enjoy!
 \verb!u!          & Undo\\
 \end{tabular}
 
-\subsection{Save and Exit}
+\subsection{Save and Quit}
 \begin{tabular}{@{}ll@{}}
-\verb!:wq!          & Save and exit\\
-\verb!:q!!          & Exit aborting changes\\
+\verb!:w! 	        & Save\\
+\verb!:wq!          & Save and quit\\
+\verb!:q!!          & Quit discarding changes\\
 \end{tabular}
 
+\section{Nice to have}
 \subsection{Syntax Highlighting}
 \begin{tabular}{@{}ll@{}}
 \verb!:syntax {on|off}!      & Toggle syntax highlighting \\
 \verb!:set bg={dark|light}!  & Adjust highlighting brightness \\
 \end{tabular}
 
+\subsection{Line numbers}
+\begin{tabular}{@{}ll@{}}
+\verb!:set (no)nu!				& Set (no) line numbers \\
+\verb!:set bg={dark|light}!  	& Adjust highlighting brightness \\
+\end{tabular}
 
+\section{Extra fun}
 
 \begin{center}
 \rule{0.3\linewidth}{0.25pt}
@@ -169,13 +145,17 @@ These are the Vim commands I actually use. Enjoy!
 
 
 
-\begin{scriptsize}
-\includegraphics[width=6em]{by_nc_sa.eps} {\copyright\ 2012 \href{http://matan.name}{Adam Matan}. 
 
-This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/3.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License}.}
+\includegraphics[width=6em]{by_nc_sa.eps} {\copyright\ 2012 \href{http://matan.name}{Adam Matan}.}
+
+Sources: \href{http://rayninfo.co.uk/vimtips.html}{Best of Vim Tips},
+Credits: \href{http://commons.wikimedia.org/wiki/File:Gnome-face-smile.svg}{Happy icon},
+
+\begin{tiny}
+This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/3.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License}.
 
 Template and general idea based on a \href{http://www.stdout.org/~winston/latex/}{\LaTeX\ template by Winston Chang}.
-\end{scriptsize}
+\end{tiny}
 
 
 
