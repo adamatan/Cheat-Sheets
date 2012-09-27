@@ -40,7 +40,8 @@
                                 {\normalfont\small\bfseries\center\color{ForestGreen}}}
 \makeatother
 
-
+% Highlighted text
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
 
 % Don't print section numbers
 \setcounter{secnumdepth}{0}
@@ -87,34 +88,35 @@
 \begin{tabular}{@{}ll@{}}
 \verb!^!          	& Goto first non-whitespace char in line\\
 \verb!$!          	& Last character in line\\
-\verb!e (E)!      	& End of (whitespace-delimited) word, next word\\
-\verb!b (B)!      	& Beginning of (whitespace-delimited) word, last word\\
+\verb!e (E)!      	& End of (whitespace-delimited) \hilight{word}, next word\\
+\verb!b (B)!      	& Beginning of (whitespace-delimited) \hilight{word}, last word\\
 \end{tabular}
 
 \subsubsection{Document scope}
 \begin{tabular}{@{}ll@{}}
 \verb!:n!         	& Goto line number \verb!n!\\ 
-\verb![m!,\verb!]m! & Previous, next method (in Java and like)\\ 
-\ctrl+b,f			& Previous, next page\\
+\verb![m!,\verb!]m! & Previous, next \hilight{method} (in Java and like)\\ 
+\ctrl+b,f			& Previous, next \hilight{page}\\
 \end{tabular}
 
 
 \subsection{Copy, Paste, Delete}
 \begin{tabular}{@{}ll@{}}
-\verb!dd!      			& Delete this line \\
+\verb!dd!      			& Delete this \hilight{line} \\
 \verb!d$!, \verb!D!     & Delete till EOL \\
-\verb!d10d!    			& Delete 10 lines \\
-\verb!y3w!     			& Copy 3 words \\
-\verb!pp!      			& Paste deleted or copied text \\
+\verb!d10d!    			& Delete \hilight{10 lines} \\
+\verb!y3w!     			& Copy 3 \hilight{words} \\
+\verb!pp!      			& \hilight{Paste} deleted or copied text \\
 \end{tabular}
 
 \subsection{Search and Replace}
 \begin{tabular}{@{}ll@{}}
 \verb!/Romeo!		         & Search for \verb!Romeo!\\
+\verb!/\cromeo!		         & Search for \verb!Romeo!, \hilight{case insensitive} \\
 \verb!:g/Romeo/#!			 & \includegraphics[width=1em]{happy.png}Show matches with line numbers\\
 \verb!n!   		             & Next match\\
 \verb!N!		             & Previous match\\
-\verb!:%s/old/new/!          & Replace \verb!old! with \verb!new! globally\\
+\verb!:%s/old/new/!          & \hilight{Replace} \verb!old! with \verb!new! globally\\
 \verb!:%s/old/new/c!         & Ask for every match\\
 \verb!:%s/^\s*--//!          & Remove SQL comments (\verb!--!)\\
 \end{tabular}
@@ -144,14 +146,13 @@
 \subsubsection{Line numbers}
 \begin{tabular}{@{}ll@{}}
 \verb!:set (no)nu!				& Set (no) line numbers \\
-\verb!:set bg={dark|light}!  	& Adjust highlighting brightness \\
 \end{tabular}
 
 \subsubsection{Indentation}
 \begin{tabular}{@{}ll@{}}
-\verb!==!				& Indent this line \\
+\verb!==!				& Indent this \hilight{line} \\
 \verb!50==! 		 	& Indent 50 next lines in accordance with this line \\
-\verb!gg=G! 		 	& Indent entire document (\verb!gg! for start, \verb!G! for end) \\
+\verb!gg=G! 		 	& Indent \hilight{entire document} (\verb!gg! for start, \verb!G! for end) \\
 \end{tabular}
 
 \begin{center}
