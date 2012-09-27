@@ -5,8 +5,10 @@
 \usepackage[landscape]{geometry}
 \usepackage{verbatim}
 \usepackage{graphicx}
+
 \usepackage{color}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{menukeys}
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true}
@@ -81,16 +83,20 @@
 \end{tabular}
 
 \subsection{Navigation}
+\subsubsection{Line scope}
 \begin{tabular}{@{}ll@{}}
 \verb!^!          	& Goto first non-whitespace char in line\\
 \verb!$!          	& Last character in line\\
 \verb!e (E)!      	& End of (whitespace-delimited) word, next word\\
 \verb!b (B)!      	& Beginning of (whitespace-delimited) word, last word\\
-\verb!:n!         	& Goto line number \verb!n!\\ 
-\verb![m!,\verb!]m! & Previous, next method (in Java and like)\\ 
-
 \end{tabular}
 
+\subsubsection{Document scope}
+\begin{tabular}{@{}ll@{}}
+\verb!:n!         	& Goto line number \verb!n!\\ 
+\verb![m!,\verb!]m! & Previous, next method (in Java and like)\\ 
+\ctrl+b,f			& Previous, next page\\
+\end{tabular}
 
 
 \subsection{Copy, Paste, Delete}
@@ -163,7 +169,6 @@
 
 \begin{tiny}
 Sources: \href{http://rayninfo.co.uk/vimtips.html}{Best of Vim Tips},
-
 StackOverflow.com questions \href{http://stackoverflow.com/questions/506075/how-do-i-fix-the-indentation-of-an-entire-file-in-vi}	{506075},
 							\href{http://stackoverflow.com/questions/12128678/vim-go-to-beginning-end-of-next-method}				{12128678}
 
