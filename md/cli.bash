@@ -12,3 +12,4 @@ ssh -o ConnectTimeout=10        host   # Set timeout (seconds)
 
 # vim
 vim scp://user@server//path/to/file    # Edit remote file (Hit Enter when filename shows up")
+:set nu                                # Line numbers
